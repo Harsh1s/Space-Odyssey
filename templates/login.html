@@ -258,15 +258,14 @@
             <div class="box">
                 <div>
                     <h1 class="event_title">Space Odyssey</h1>
-                    <h1 class="form-title">Login - SpaceOdyssey</h1>
+                    <h1 class="form-title">Login</h1>
                     {% if show_message %}
                     <div class="show-message">
                         <p class="show-message-p">{{ show_message }}</p>
                     </div>
                     {% endif %}
                     <form action="{{ url_for('login') }}" method="post">
-                        <input class="form-input" type="text" placeholder="Username" name="regno" id="regno"
-                            maxlength="9" required />
+                        <input class="form-input" type="text" placeholder="Username" name="regno" id="regno" required />
                         <input class="form-input" type="password" placeholder="Password" id="password" name="password">
                         <button type="submit" class="glow-on-hover">Submit</button>
                     </form>

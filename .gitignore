@@ -1,0 +1,7 @@
+__pycache__
+flask_session
+spaceRegistrations.csv
+credentials-space-odyssey.json
+credentials-spreadsheet.json
+space-odyssey.env
+space-odyssey.log

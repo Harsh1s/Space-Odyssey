@@ -81,23 +81,10 @@
             </div>
             <form method="post" action="/play">
                 <div>
-                    <label for="answer">Ans:</label>
+                    <label for="answer">Answer</label>
                     <input class="form-input" placeholder="Your Answer" type="text" id="answer" name="answer"
                         required />
                 </div>
-                <!-- <div> -->
-                    <!-- <label for="key">Key:</label> -->
-                    <!-- <input class="form-input" value="{{  last_key  }}" placeholder="Location Key" type="text" id="key" -->
-                        <!-- name="key" required /> -->
-                <!-- </div> -->
-                <!-- <div class="location">
-                    <p>Key will be given by the CYSCOM Member at this location:</p>
-                    {% if location %}
-                    <p><b style="color:aquamarine">{{ location }}</b></p>
-                    {% else %}
-                    <p>Error fetching location!</p>
-                    {% endif %}
-                </div> -->
                 <div id="hint-div"></div>
                 <input class="button" placeholder="Your Answer" type="submit" value="Submit" />
             </form>
@@ -107,8 +94,7 @@
             <ul>
                 <li>Using hints imposes a penalty of 50% for a question.</li>
                 <li>The format for every answer is small case and without space. For example, if the answer is "221
-                    Baker
-                    Street.", you should enter "221bakerstreet".</li>
+                    Baker Street.", you should enter "221bakerstreet".</li>
                 <li>The most suitable answer is chosen if multiple answers exist. No acronyms are used. </li>
             </ul>
         </section>

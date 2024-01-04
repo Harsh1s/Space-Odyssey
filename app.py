@@ -4,8 +4,6 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, jsonify, redirect, render_template, request, session
 from flask_session import Session
-from icecream import ic
-from markupsafe import Markup, escape
 
 from csv_functions import check_user_exists_in_csv, header, write_to_csv
 from firebase_functions import (

@@ -87,15 +87,4 @@ def calculate_points_for_answering(
         abs(((((ratio * (time_left % base_value)) / time_differentiator))) + 1)
     )
 
-    from icecream import ic
-
-    ic(
-        points_without_time,
-        points_with_time,
-        time_left,
-        time_differentiator,
-        base_value,
-        ratio,
-    )
-
     return points_without_time, points_with_time

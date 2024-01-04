@@ -21,7 +21,7 @@
 	},
 	{
 		"no": 3,
-		"type": "3",
+		"type": "i",
 		"text": "3.png",
 		"ans": "3",
 		"hint": "Google is your best friend!",

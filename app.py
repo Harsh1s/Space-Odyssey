@@ -32,36 +32,6 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
-def log_and_print(msg: str, level: str = "warn") -> None:
-    """
-    This function can be used for printing an error message, as well as for logging it by passing the level to the level parameter.
-
-    This function looks for the env variable `KEEP_A_LOG`, to check whether it should keep logs to the file.
-
-    Printing always happens, irrespective of the value of `KEEP_A_LOG`.
-
-    #### Parameters
-        `msg` - The message to print/log.
-        `
-    """
-    print(msg)
-    logger = logging.getLogger("spaceodyssey")
-    logging.basicConfig(
-        format="%(asctime)s %(message)s",
-        filename="space-odyssey.log",
-        encoding="utf-8",
-        level=logging.DEBUG,
-    )
-    if level == "warn":
-        logger.warning(msg)
-    elif level == "critical":
-        logger.critical(msg)
-    elif level == "info":
-        logger.info(msg)
-    else:
-        logger.debug(msg)
-
-
 def has_event_ended() -> bool:
     return False
 
@@ -130,12 +100,6 @@ def register():
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
-    # if already logged in, redirect to play page (Enable this after testing)
-
-    # if "regno" in session:
-    #     return render_template("play.html", success=True, name=session["name"])
-    # if has_event_ended:
-    #     return redirect("/leaderboard")
     if request.method == "POST":
         regno = request.form["regno"].upper()
         if "@" in regno:
@@ -166,9 +130,6 @@ def play():
         print("Not logged in and tried to access play")
         return redirect("/logout")
 
-    # if has_event_ended:
-    #     return redirect("/leaderboard")
-
     show_name = session["name"] if "name" in session else session["regno"]
 
     attempted_correct = [False, False]
@@ -183,9 +144,6 @@ def play():
         attempted_correct[0] = True
         submitted_answer = request.form["answer"]
         submitted_key = "KEY1234"
-        log_and_print(
-            f"{session['regno']} - {session['name']} answered {submitted_answer} / {submitted_key} for {ques.no} in list, {session['current_question']} in his sequence"
-        )
 
         if answerify(submitted_answer) == ques.answer and answerify(
             submitted_key
@@ -236,7 +194,6 @@ def hints():
     ques = get_personal_current_question(regno=session["regno"])
     hint = ques.hint
     hint_used(session["regno"])
-    log_and_print(f"{session['regno']} used a hint for {ques.no}")
     if hint:
         return jsonify({"hint": str(hint)})
     return jsonify({"hint": "Hint not found/Does not exist for this question"})

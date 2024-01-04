@@ -1,0 +1,6 @@
+version: "2"
+services:
+    odyssey:
+        build: ./space-hunt-backend
+        ports:
+            - 80:80

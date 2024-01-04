@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Leaderboard - Space Odyssey</title>
+
+    <link rel="icon" href="/static/images/logo.png">
+    <link rel="shortcut icon" href="/static/images/logo.png" type="image/x-icon" />
+
+    <link href="/static/css/common.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        .container {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: RGB(234, 234, 234);
+        }
+
+        header {
+            background-color: rgb(41, 41, 41);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            border-color: rgb(0, 0, 0);
+            border-radius: 25px;
+
+        }
+
+        #pointsDev {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #points {
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 90%;
+            transform: translateY(5%);
+            height: 100%;
+            border: 2px solid rgb(0, 0, 0);
+            border-color: rgb(0, 0, 0);
+            border-radius: 10px;
+        }
+
+        th {
+            color: rgb(255, 255, 255);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            padding: 12px;
+            /*border-bottom : 1px solid white;*/
+            background-color: rgb(5, 5, 110);
+        }
+
+        td {
+            color: rgb(0, 0, 0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: rgb(197, 197, 197);
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-700">
+    <div id="container">
+        <header>
+            <img src="/static/images/logo.png" width="40" style="display: block; padding: 5px; object-fit: scale-down;">
+            <h1 class="event_title">SPACE ODYSSEY</h1>
+        </header>
+        <div id="pointsDev">
+            <h1 style="color:white;">Leaderboard</h1>
+            <table class="table-auto" id="points">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in ordered_list %}
+                    <tr>
+                        <td>{{ ordered_list.index(user) + 1 }}</td>
+                        <td>{{ user[0] }}</td>
+                        <td>{{ user[1] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

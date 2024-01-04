@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Byte The Bits</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="/static/css/challenges/1.css" />
+        <script type="application/javascript" src="/static/js/challenges/ctf-challenge.js"></script>
+        <script type="application/javascript" src="/static/js/challenges/1.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <img src="/static/images/logo.png" width="60" height="60" style="display: block" />
+                <h1>Space Odyssey</h1>
+            </header>
+
+            <button class="tablink" onclick="openTab('tabintro', this, '#222')" id="defaultOpen">Technex</button>
+            <button class="tablink" onclick="openTab('tababout', this, '#222')">Byte The Bits</button>
+            <div id="tabintro" class="tabcontent">
+                <h3 style="font-size: 28px">Technex'24</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae accusamus quo libero, adipisci hic corrupti et aliquid eveniet veniam sunt incidunt tenetur laboriosam nobis blanditiis dicta labore at, placeat exercitationem.
+                </p>
+                <h4 style="font-size: 24px">Events</h4>
+                <p>Dive into the different domains of computation with Byte the bits. The events are designed to test your skill in
+                competitive programming, machine learning and information security against the best in the world. Get your grey matter
+                ready to solve some exciting problems!</p>
+                <ul id="events">
+                    <li>Dummy</li>
+                    <li>Dummy</li>
+                </ul>
+                <p>Click <a href="https://www.technex.co.in/">here</a> to know more</p>
+            </div>
+            <div id="tababout" class="tabcontent">
+                <div id="flagImage" style="display: flex; flex-direction: column; align-items: center">
+                    <p style="font-size: 30px; text-align: center">Keep Looking for the stars!</p>
+                    <img src="/static/images/flag.jpg" width="250" />
+                </div>
+            </div>
+
+            <!-- Html is neat. Anyways have 1/3 of the flag: picoCTF{tru3_d3 -->
+        </div>
+    </body>
+</html>

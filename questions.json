@@ -1,0 +1,32 @@
+[
+    {
+        "no": 1,
+        "type": "i",
+        "text": "1.png",
+        "ans": "uranus",
+        "hint": "7th planet from the sun",
+        "difficulty": "start",
+        "key": "KEY1234",
+        "location": "Outside Gymkhana"
+    },
+    {
+        "no": 2,
+        "type": "t",
+        "text": "die",
+        "ans": "uranus",
+        "hint": "7th planet from the sun",
+        "difficulty": "easy",
+        "key": "KEY1234",
+        "location": "Outside Gymkhana"
+    },
+    {
+        "no": 3,
+        "type": "t",
+        "text": "dead",
+        "ans": "uranus",
+        "hint": "7th planet from the sun",
+        "difficulty": "easy",
+        "key": "KEY1234",
+        "location": "Outside Gymkhana"
+    }
+]

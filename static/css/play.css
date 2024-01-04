@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto&display=swap");
+* {
+    color: white;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #181818;
+}
+.event_title {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0rem 0rem 0rem;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.person-name {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.3rem;
+}
+.name-and-logout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-message-p {
+    padding: 1.5rem;
+    background-color: rgb(161, 25, 25);
+    color: white;
+
+    width: max-content;
+}
+button,
+.button {
+    width: 150px;
+    height: 40px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #0055bd;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+    font-size: medium;
+    border: none;
+    margin: 1rem;
+    text-align: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline: 1px solid white;
+    border-radius: 5%;
+}
+.play-section,
+.faq {
+    width: 99vw;
+    margin-top: 1rem;
+    min-width: fit-content;
+    padding: 1rem;
+}
+.faq > ul > li {
+    margin: 1.2rem;
+}
+.question-image {
+    width: 80vw;
+    object-fit: scale-down;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+form > div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0px 10px 0px 10px;
+}
+.question-holder {
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+.form-input {
+    margin: 1rem 1rem;
+    padding: 0.8rem;
+    outline: none;
+    border-radius: 10px;
+    width: 90%;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+}
+.location > p {
+    margin-bottom: 0rem;
+}
+input {
+    color: black;
+}
+
+@media screen and (min-width: 1000px) {
+    .form-input {
+        width: 60%;
+    }
+    .play-section,
+    .faq {
+        width: 40vw;
+    }
+    .question-image {
+        width: 25rem;
+    }
+}
+table > tr > td,
+td > input {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.sudo-box::-webkit-outer-spin-button,
+.sudo-box::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sudo-box[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.sudo-box {
+    border: none;
+    width: 1em;
+    padding: 6px;
+}
+
+.sudo-box:focus {
+    outline: none;
+}
+
+td {
+    width: 2em;
+    height: 2em;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ffffff;
+    text-align: center;
+}
+
+section > table,
+.center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.scrambled {
+    font-size: 1.2rem;
+    outline: 1px dashed white;
+}
+
+.given {
+    font-weight: 600;
+    color: white;
+}
+
+.empty {
+    color: #000;
+    border: none;
+}
+.crossword {
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #181818;
+}
+
+.crossword input::-webkit-outer-spin-button,
+.crossword input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.crossword input {
+    border: none;
+    width: 0.8em;
+    padding: 6px;
+}
+
+.crossword input:focus {
+    outline: none;
+}
+
+.crossword .empty {
+    color: #dad2d2;
+    border: none;
+    font-weight: 700;
+}
+
+.crossword input[type="text"] {
+    background-color: #181818;
+    color: #dad2d2;
+}
+
+.crossword td {
+    width: 2em;
+    height: 2em;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #dad2d2;
+    text-align: center;
+}
+
+.crossword .highlight {
+    background-color: #aec7d7;
+    color: #000;
+}
+
+.crossword .highlight input[type="text"] {
+    color: #000;
+    background-color: #aec7d7;
+}
+
+.crossword p {
+    padding-top: 2rem;
+    text-align: center;
+    line-height: 1.5;
+    width: 22rem;
+    color: #dad2d2;
+}
+
+.crossword h1 {
+    color: #dad2d2;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.crossword section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

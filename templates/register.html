@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Register - Space Odyssey</title>
+
+    <link rel="icon" href="/static/images/logo.png">
+    <link rel="shortcut icon" href="/static/images/logo.png" type="image/x-icon" />
+
+    <link href="/static/css/common.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script>
+        /*to prevent Firefox FOUC, this must be here*/
+        let FF_FOUC_FIX;
+    </script>
+</head>
+
+<body>
+    <section id="animation-section">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+    <div class="container">
+        <main>
+            <div class="box">
+                {% if yet_to_register %}
+                <h1 class="event_title">Space Odyssey</h1>
+                <h1 class="form-title">Register for spaceOdessy</h1>
+                <form action="{{ url_for('register') }}" method="post">
+                    <input class="form-input" type="text" placeholder="Full Name" name="name" id="name" required />
+                    <input class="form-input" type="text" placeholder="Username" name="regno" id="regno"
+                        maxlength="9" required />
+                    <input class="form-input" type="email" placeholder="Email" name="email" id="email" required />
+                    <input class="form-input" type="text" placeholder="Phone Number" name="phone" id="phone"
+                        minlength="10" maxlength="15" required />
+
+                    <!-- <input class="form-input" type="text" placeholder="VIT Chennai Events Receipt Number"
+                        name="receiptno" id="receiptno" required /> -->
+                    <div
+                        style="width:100%;display:flex;flex-direction: column;justify-content: center;align-items:center;">
+                        <input class="form-input" type="password" placeholder="Password" id="password" name="password">
+                        <label class="form-input" style="margin:0rem;padding-top:0rem;padding-bottom:0rem;"
+                            for="password">
+                            <p style="margin:0"> Contact <b>+918544633455</b> in case you forget your password.</p>
+                        </label>
+                    </div>
+                    <button type="submit" class="glow-on-hover">Submit</button>
+                </form>
+                {% endif %}
+                {% if show_message %}
+                <div class="match1">
+                    <div class="show-message">
+                        <p class="show-message-p">{{ show_message }}</p>
+                        <a href="/"><button>Go Back</button></a>
+                        <a href="{{ url_for('login') }}"><button>Login</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </main>
+    </div>
+    <script type="module" src="/static/js/animate.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Play - Space Odyssey</title>
+
+    <link rel="icon" href="/static/images/logo.png">
+    <link rel="shortcut icon" href="/static/images/logo.png" type="image/x-icon" />
+
+    <link href="/static/css/play.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        /*to prevent Firefox FOUC, this must be here*/
+        let FF_FOUC_FIX;
+        $(document).ready(function () {
+            $("#show-hints-btn").click(function () {
+                $.ajax({
+                    url: "/hints",
+                    type: "POST",
+                    success: function (data) {
+                        $("#hint-div").html(data.hint);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <nav>
+                <div>
+                    <h1 class="event_title">Space Odyssey</h1>
+                </div>
+                <div class="name-and-logout">
+                    {% if show_name %}
+                    <div class="person-name">
+                        <p>{{ show_name }}</p>
+                    </div>
+                    {% endif %}
+                    <div>
+                        <div style="display: flex; flex-direction: row;margin-bottom: 1rem;">
+                            <a href="/leaderboard"><button>Leaderboard</button></a>
+                            <a href="/logout"><button>Logout</button></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="play-section">
+            <div>
+                {% if attempted_correct[0] %}
+                {% if attempted_correct[1] %}
+                <p style="color: green;">Your answer was correct!</p>
+                {% elif not attempted_correct[1] %}
+                <p style="color: red;">Your answer/key is wrong!</p>
+                {% endif %}
+                {% endif %}
+            </div>
+            <div class="question-holder">
+                <div>
+                    <!-- Question Text -->
+                    {% if q_type=="i" %}
+                    <img class="question-image" src="/static/images/questions/{{  question  }}">
+                    {% elif q_type=="t" %}
+                    <p class="question-text">
+                        {{ question|safe }}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+            <form method="post" action="/play">
+                <div>
+                    <label for="answer">Ans:</label>
+                    <input class="form-input" placeholder="Your Answer" type="text" id="answer" name="answer"
+                        required />
+                </div>
+                <!-- <div> -->
+                    <!-- <label for="key">Key:</label> -->
+                    <!-- <input class="form-input" value="{{  last_key  }}" placeholder="Location Key" type="text" id="key" -->
+                        <!-- name="key" required /> -->
+                <!-- </div> -->
+                <!-- <div class="location">
+                    <p>Key will be given by the CYSCOM Member at this location:</p>
+                    {% if location %}
+                    <p><b style="color:aquamarine">{{ location }}</b></p>
+                    {% else %}
+                    <p>Error fetching location!</p>
+                    {% endif %}
+                </div> -->
+                <div id="hint-div"></div>
+                <input class="button" placeholder="Your Answer" type="submit" value="Submit" />
+            </form>
+            <button id="show-hints-btn">Show Hints</button>
+        </section>
+        <section class="faq">
+            <ul>
+                <li>Using hints imposes a penalty of 50% for a question.</li>
+                <li>The format for every answer is small case and without space. For example, if the answer is "221
+                    Baker
+                    Street.", you should enter "221bakerstreet".</li>
+                <li>The most suitable answer is chosen if multiple answers exist. No acronyms are used. </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,32 +1,102 @@
 [
-    {
-        "no": 1,
-        "type": "i",
-        "text": "1.png",
-        "ans": "uranus",
-        "hint": "7th planet from the sun",
-        "difficulty": "start",
-        "key": "KEY1234",
-        "location": "Outside Gymkhana"
-    },
-    {
-        "no": 2,
-        "type": "t",
-        "text": "die",
-        "ans": "uranus",
-        "hint": "7th planet from the sun",
-        "difficulty": "easy",
-        "key": "KEY1234",
-        "location": "Outside Gymkhana"
-    },
-    {
-        "no": 3,
-        "type": "t",
-        "text": "dead",
-        "ans": "uranus",
-        "hint": "7th planet from the sun",
-        "difficulty": "easy",
-        "key": "KEY1234",
-        "location": "Outside Gymkhana"
-    }
+	{
+		"no": 1,
+		"type": "i",
+		"text": "1.png",
+		"ans": "85",
+		"hint": "Check our Instagram page for the answer!",
+		"difficulty": "start",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 2,
+		"type": "i",
+		"text": "2.png",
+		"ans": "8",
+		"hint": "Checkout our website technex.co.in for the answer!",
+		"difficulty": "start",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 3,
+		"type": "3",
+		"text": "3.png",
+		"ans": "3",
+		"hint": "Google is your best friend!",
+		"difficulty": "easy",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 4,
+		"type": "i",
+		"text": "4.png",
+		"ans": "constellation",
+		"hint": "Orion, Hunter's belt and Dipper are some examples of this!",
+		"difficulty": "easy",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 5,
+		"type": "i",
+		"text": "5.png",
+		"ans": "polyglot",
+		"hint": "The event was made to cater to people who were procient in multiple languages, and thus were _______'s.",
+		"difficulty": "medium",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 6,
+		"type": "i",
+		"text": "6.png",
+		"ans": "interstellar",
+		"hint": "Christopher Nolan FTW",
+		"difficulty": "medium",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 7,
+		"type": "i",
+		"text": "7.png",
+		"ans": "astropy",
+		"hint": "It starts with A and ends with PY",
+		"difficulty": "medium",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 8,
+		"type": "i",
+		"text": "8.png",
+		"ans": "cosinesimilarity",
+		"hint": "It's a mathematical term, often used with dot products.",
+		"difficulty": "hard",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 9,
+		"type": "i",
+		"text": "9.png",
+		"ans": "orion",
+		"hint": "Have you ever heard about Binary to ASCII decoders on the web?",
+		"difficulty": "hard",
+		"key": "KEY1234",
+		"location": ""
+	},
+	{
+		"no": 10,
+		"type": "i",
+		"text": "10.png",
+		"ans": "yes",
+		"hint": "It's definitely not a no.",
+		"difficulty": "hard",
+		"key": "KEY1234",
+		"location": ""
+	}
 ]

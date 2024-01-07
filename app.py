@@ -61,7 +61,6 @@ def register():
         data["sequence"] = str(team_sequence)
         data["hint_used"] = False
         data["hints_used"] = "[0]"
-        print(data["regno"] + " - " + data["name"], "tried to register")
         if check_user_exists_in_csv(data["regno"], data["uniqid"]):
             message = "You have already registered!"
             if not get_team_dict(data["regno"]):
@@ -83,7 +82,6 @@ def register():
             )
             initialize_firebase_for_a_user(data)
             write_to_csv(data, filename="spaceRegistrations.csv", row=row)
-            print(f"Added {row}")
             session["name"] = data["name"]
             session["regno"] = data["regno"]
             session["uniqid"] = data["uniqid"]
@@ -105,7 +103,6 @@ def login():
         if "@" in regno:
             return render_template("login.html", show_message="Invalid Credentials")
         hashed_pw = hasher(request.form["password"])
-        print(regno + " - " + hashed_pw, "tried to login")
         if check_password(regno, hashed_pw):
             session.clear()
             d = get_team_dict(regno)
@@ -113,9 +110,6 @@ def login():
             session["regno"] = d["regno"]
             session["uniqid"] = d["uniqid"]
             session["current_question"] = d["current_question"]
-            print(
-                f"User {session['regno']} has logged in, is on {session['current_question']} question"
-            )
             return redirect("/play")
 
         else:
@@ -127,7 +121,6 @@ def login():
 def play():
     # if not logged in, redirect to login page
     if "regno" not in session:
-        print("Not logged in and tried to access play")
         return redirect("/logout")
 
     show_name = session["name"] if "name" in session else session["regno"]
@@ -189,7 +182,6 @@ def play():
 def hints():
     # if not logged in, redirect to login page
     if "regno" not in session:
-        print("Not logged in and tried to access play")
         return redirect("/logout")
     ques = get_personal_current_question(regno=session["regno"])
     hint = ques.hint
